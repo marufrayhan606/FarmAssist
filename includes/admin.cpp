@@ -57,6 +57,7 @@ void adminPanel() {
     do {
         cout << "***********" << endl;
         cout << "Admin Panel" << endl;
+        cout << "***********" << endl;
         cout << "1. View Stock" << endl;
         cout << "2. Manage Stock" << endl;
         cout << "3. Logout" << endl;
@@ -75,6 +76,8 @@ void adminPanel() {
         case 3:
             homeLayout();
             break;
+        case 4:
+            return;
         default:
             cout << "Invalid choice. Please try again." << endl;
             break;
