@@ -119,5 +119,5 @@ void market() {
             cout << "Invalid choice. Please try again." << endl;
             break;
         }
-    } while (choice != 4);
+    } while (true);
 }

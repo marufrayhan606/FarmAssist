@@ -35,7 +35,6 @@ Season season;
 
 void dataForCrops()
 {
-
     cout << "Enter the land area in acres: ";
     cin >> landArea;
 
@@ -81,7 +80,7 @@ void dataForCrops()
             cout << "Invalid choice. Please try again" << endl;
             break;
         }
-    } while (!(choice >= 1 && choice <= 8));
+    } while (true);
 
     system("cls");
 
