@@ -42,5 +42,5 @@ void guest()
             break;
         }
 
-    } while (choice != 4);
+    } while (true);
 }
