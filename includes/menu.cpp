@@ -13,23 +13,23 @@ using namespace std;
 void homeLayout()
 {
     system("cls");
-    cout << "*****************************************" << endl;
-    cout << "*\t\tFarmAssist\t\t*" << endl;
-    cout << "*****************************************" << endl;
 
     cout << "Welcome to FarmAssist" << endl;
-    cout << "Please select an option" << endl;
-    cout << "1. User Register" << endl;
-    cout << "2. User Login" << endl;
-    cout << "3. Continue as Guest" << endl;
-    cout << "4. Admin" << endl;
-    cout << "5. Exit" << endl;
+    cout << "---------------------------------" << endl;
+    cout << endl;
+    cout << "\tPlease select an option" << endl;
+    cout << "\t1. User Register" << endl;
+    cout << "\t2. User Login" << endl;
+    cout << "\t3. Continue as Guest" << endl;
+    cout << "\t4. Admin" << endl;
+    cout << "\t5. Exit" << endl;
+    cout << endl;
 
     int choice;
 
     do
     {
-        cout << "Enter your choice: ";
+        cout << "\tEnter your choice: ";
         cin >> choice;
 
         switch (choice)
@@ -71,9 +71,9 @@ void registerUser()
     system("cls");
     cin.ignore();
 
-    cout << "*****************" << endl;
     cout << "User Registration" << endl;
-    cout << "*****************" << endl;
+    cout << "---------------------------------" << endl;
+    cout << endl;
 
     string username, password;
     cout << "Enter a username: ";
@@ -96,9 +96,9 @@ bool loginUser()
     string username, password;
     cin.ignore();
 
-    cout << "**********" << endl;
     cout << "User Login" << endl;
-    cout << "**********" << endl;
+    cout << "---------------------------------" << endl;
+    cout << endl;
 
     cout << "Enter your username: ";
     getline(cin, username);
@@ -122,9 +122,9 @@ bool loginUser()
 void loggedInLayout()
 {
     system("cls");
-    cout << "*********" << endl;
     cout << "Logged In" << endl;
-    cout << "*********" << endl;
+    cout << "---------------------------------" << endl;
+    cout << endl;
     
     cout << "Please select an option" << endl;
     cout << "1. Farm Suggestions" << endl;
@@ -167,9 +167,9 @@ void farmSuggestion()
     {
         system("cls");
 
-        cout << "***************" << endl;
-        cout << "Farm Suggestion" << endl;
-        cout << "***************" << endl;
+        cout << "Farm Suggestions" << endl;
+        cout << "---------------------------------" << endl;
+        cout << endl;
         
         cout << "Enter your choice:" << endl; 
         cout << "1. Crops" << endl;
@@ -205,9 +205,9 @@ void admin()
 
     system("cls");
 
-    cout << "***********" << endl;
     cout << "Admin Login" << endl;
-    cout << "***********" << endl;
+    cout << "---------------------------------" << endl;
+    cout << endl;
 
     cout << "Enter admin username: ";
     cin >> username;

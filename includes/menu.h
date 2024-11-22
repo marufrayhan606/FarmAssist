@@ -8,5 +8,4 @@ void loggedInLayout();
 void farmSuggestion();
 void admin();
 
-
 #endif // MENU_H
