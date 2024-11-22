@@ -21,7 +21,6 @@ void saveInventory(const vector<Crop>& crops) {
     file.close();
 }
 
-
 void manageStock() {
     vector<Crop> crops = loadInventory();
     string cropName;
@@ -82,6 +81,6 @@ void adminPanel() {
             cout << "Invalid choice. Please try again." << endl;
             break;
         }
-    } while (choice != 4);
+    } while (true);
 }
 

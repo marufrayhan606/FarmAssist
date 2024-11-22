@@ -63,7 +63,7 @@ void homeLayout()
             break;
         }
 
-    } while (!(choice >= 1 && choice <= 5));
+    } while (true);
 }
 
 void registerUser()
@@ -130,6 +130,7 @@ void loggedInLayout()
     cout << "1. Farm Suggestions" << endl;
     cout << "2. Market" << endl;
     cout << "3. Logout" << endl;
+    cout << "4. Exit" << endl;
 
     int choice;
 
@@ -156,7 +157,7 @@ void loggedInLayout()
             break;
         }
 
-    } while (choice != 4);
+    } while (true);
 }
 
 void farmSuggestion()
@@ -188,7 +189,7 @@ void farmSuggestion()
             break;
         }
 
-    } while (!(choice >= 1 && choice <= 2));
+    } while (true);
 }
 
 void admin()
