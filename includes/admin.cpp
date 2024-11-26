@@ -54,9 +54,14 @@ void adminPanel() {
 
     int choice;
     do {
-        cout << "***********" << endl;
-        cout << "Admin Panel" << endl;
-        cout << "***********" << endl;
+
+        cout << "     _       _           _          ____                  _ " << endl;
+        cout << "    / \\   __| |_ __ ___ (_)_ __    |  _ \\ __ _ _ __   ___| |" << endl;
+        cout << "   / _ \\ / _` | '_ ` _ \\| | '_ \\   | |_) / _` | '_ \\ / _ \\ |" << endl;
+        cout << "  / ___ \\ (_| | | | | | | | | | |  |  __/ (_| | | | |  __/ |" << endl;
+        cout << " /_/   \\_\\__,_|_| |_| |_|_|_| |_|  |_|   \\__,_|_| |_|\\___|_|" << endl;
+        cout << endl;
+        cout << "--------------------------------------------------------------------" << endl;
         cout << "1. View Stock" << endl;
         cout << "2. Manage Stock" << endl;
         cout << "3. Logout" << endl;
