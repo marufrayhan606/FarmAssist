@@ -11,6 +11,61 @@ using namespace std;
 
 vector<CartItem> cart;
 
+void market() {
+    system("cls");
+    cout << "Market Place" << endl;
+    cout << "---------------------------------" << endl;
+    vector<Crop> crops = loadInventory();
+    viewStock();
+
+    int choice;
+    do {
+        cout << "1. Add to Cart" << endl;
+        cout << "2. View Cart" << endl;
+        cout << "3. Place Order" << endl;
+        cout << "4. Home" << endl;
+        cout << "5. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+        case 1: {
+            string cropName;
+            int quantity;
+            cout << "Enter crop name to add to cart: ";
+            cin >> cropName;
+            cout << "Enter quantity: ";
+            cin >> quantity;
+
+            auto it = find_if(crops.begin(), crops.end(), [&cropName](const Crop& crop) {
+                return crop.name == cropName;
+            });
+
+            if (it != crops.end() && it->stock >= quantity) {
+                addToCart(*it, quantity);
+                cout << "Added to cart successfully!" << endl;
+            } else {
+                cout << "Crop not found or insufficient stock." << endl;
+            }
+            break;
+        }
+        case 2:
+            viewCart();
+            break;
+        case 3:
+            placeOrder();
+            break;
+        case 4:
+            loggedInLayout();
+            break;
+        case 5:
+            return;
+        default:
+            cout << "Invalid choice. Please try again." << endl;
+            break;
+        }
+    } while (true);
+}
 void addToCart(const Crop& crop, int quantity) {
     for (auto& item : cart) {
         if (item.crop.name == crop.name) {
@@ -73,58 +128,4 @@ void placeOrder() {
     loggedInLayout();
 }
 
-void market() {
-    system("cls");
-    cout << "Market Place" << endl;
-    cout << "---------------------------------" << endl;
-    vector<Crop> crops = loadInventory();
-    viewStock();
 
-    int choice;
-    do {
-        cout << "1. Add to Cart" << endl;
-        cout << "2. View Cart" << endl;
-        cout << "3. Place Order" << endl;
-        cout << "4. Home" << endl;
-        cout << "5. Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
-
-        switch (choice) {
-        case 1: {
-            string cropName;
-            int quantity;
-            cout << "Enter crop name to add to cart: ";
-            cin >> cropName;
-            cout << "Enter quantity: ";
-            cin >> quantity;
-
-            auto it = find_if(crops.begin(), crops.end(), [&cropName](const Crop& crop) {
-                return crop.name == cropName;
-            });
-
-            if (it != crops.end() && it->stock >= quantity) {
-                addToCart(*it, quantity);
-                cout << "Added to cart successfully!" << endl;
-            } else {
-                cout << "Crop not found or insufficient stock." << endl;
-            }
-            break;
-        }
-        case 2:
-            viewCart();
-            break;
-        case 3:
-            placeOrder();
-            break;
-        case 4:
-            loggedInLayout();
-            break;
-        case 5:
-            return;
-        default:
-            cout << "Invalid choice. Please try again." << endl;
-            break;
-        }
-    } while (true);
-}
