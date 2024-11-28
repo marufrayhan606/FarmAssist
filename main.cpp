@@ -20,6 +20,10 @@ int main()
     
     cout << endl;
     cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
     printSlowly("\t\t\t _      __    __                     __     \n", 1);
     printSlowly("\t\t\t| | /| / /__ / /______  __ _  ___   / /____ \n", 1);
     printSlowly("\t\t\t| |/ |/ / -_) / __/ _ \\/  ' \\/ -_) / __/ _ \\\n", 1);
