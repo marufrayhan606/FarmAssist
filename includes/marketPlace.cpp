@@ -28,7 +28,7 @@ void viewCart() {
     }
 
     double total = 0.0;
-    cout << left << setw(20) << "Name" << setw(10) << "Quantity" << setw(15) << "Price per unit (tk)" << setw(15) << "Subtotal" << endl;
+    cout << left << setw(20) << "Name" << setw(10) << "Quantity" << setw(15) << "Price per unit" << setw(15) << "Subtotal" << endl;
     cout << "---------------------------------------------------------------------" << endl;
     for (const auto& item : cart) {
         double subtotal = item.quantity * item.crop.pricePerUnit;
@@ -36,7 +36,9 @@ void viewCart() {
         cout << left << setw(20) << item.crop.name << setw(10) << item.quantity << setw(15) << item.crop.pricePerUnit << setw(15) << subtotal << endl;
     }
     cout << "---------------------------------------------------------------------" << endl;
+    cout << endl;
     cout << "Total: " << total << " tk" << endl;
+    cout << endl;
 }
 
 void placeOrder() {
@@ -67,6 +69,7 @@ void placeOrder() {
 
     cout << "Order placed successfully!" << endl;
     cart.clear();
+    getchar();
     loggedInLayout();
 }
 
