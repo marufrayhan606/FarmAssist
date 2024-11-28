@@ -240,24 +240,24 @@ void admin()
 
     system("cls");
 
-    cout << "     _       _           _          _                _       " << endl;
-    cout << "    / \\   __| |_ __ ___ (_)_ __    | |    ___   __ _(_)_ __  " << endl;
-    cout << "   / _ \\ / _` | '_ ` _ \\| | '_ \\   | |   / _ \\ / _` | | '_ \\ " << endl;
-    cout << "  / ___ \\ (_| | | | | | | | | | |  | |__| (_) | (_| | | | | |" << endl;
-    cout << " /_/   \\_\\__,_|_| |_| |_|_|_| |_|  |_____\\___/ \\__, |_|_| |_|" << endl;
-    cout << "                                               |___/         " << endl;
-    cout << "--------------------------------------------------------------------" << endl;
+    cout << "\t\t\t\t     _       _           _          _                _       " << endl;
+    cout << "\t\t\t\t    / \\   __| |_ __ ___ (_)_ __    | |    ___   __ _(_)_ __  " << endl;
+    cout << "\t\t\t\t   / _ \\ / _` | '_ ` _ \\| | '_ \\   | |   / _ \\ / _` | | '_ \\ " << endl;
+    cout << "\t\t\t\t  / ___ \\ (_| | | | | | | | | | |  | |__| (_) | (_| | | | | |" << endl;
+    cout << "\t\t\t\t /_/   \\_\\__,_|_| |_| |_|_|_| |_|  |_____\\___/ \\__, |_|_| |_|" << endl;
+    cout << "\t\t\t\t                                               |___/         " << endl;
+    cout << "\t\t\t\t--------------------------------------------------------------------" << endl;
     cout << endl;
 
-    cout << "Enter admin username: ";
+    cout << "\t\t\t\t               Enter admin username: ";
     cin >> username;
     if (username == admin.username)
     {
-        cout << "Enter admin password: ";
+        cout << "\t\t\t\t               Enter admin password: ";
         cin >> password;
         if (password == admin.password)
         {
-            cout << "Login successful" << endl;
+            cout << "\t\tLogin successful" << endl;
             cout << endl;
             cout << endl;
             getchar();
@@ -267,11 +267,11 @@ void admin()
         }
         else
         {
-            cout << "Invalid username or password" << endl;
+            cout << "\t\tInvalid username or password" << endl;
         }
     }
     else
     {
-        cout << "Invalid username or password" << endl;
+        cout << "\t\tInvalid username or password" << endl;
     }
 }

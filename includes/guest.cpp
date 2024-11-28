@@ -7,9 +7,15 @@ using namespace std;
 void guest()
 {
     system("cls");
-    cout << "Welcome !!" << endl;
+    cout << " __        __   _                              ____                 _   " << endl;
+    cout << " \\ \\      / /__| | ___ ___  _ __ ___   ___    / ___|_   _  ___  ___| |_ " << endl;
+    cout << "  \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\  | |  _| | | |/ _ \\/ __| __| " << endl;
+    cout << "   \\ V  V /  __/ | (_| (_) | | | | | |  __/  | |_| | |_| |  __/\\__ \\ |_ " << endl;
+    cout << "    \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|   \\____|\\__,_|\\___||___/\\__| " << endl;
+    cout << "                                                                         " << endl;
     cout << "--------------------------------" << endl;
     cout << "You are now browsing as a guest" << endl;
+    cout << endl;
     cout << "Please select an option" << endl;
     cout << "1. Crops" << endl;
     cout << "2. Livestock" << endl;

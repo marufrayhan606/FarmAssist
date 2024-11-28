@@ -82,7 +82,8 @@ void market() {
         cout << "1. Add to Cart" << endl;
         cout << "2. View Cart" << endl;
         cout << "3. Place Order" << endl;
-        cout << "4. Exit" << endl;
+        cout << "4. Home" << endl;
+        cout << "5. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -114,6 +115,9 @@ void market() {
             placeOrder();
             break;
         case 4:
+            loggedInLayout();
+            break;
+        case 5:
             return;
         default:
             cout << "Invalid choice. Please try again." << endl;
