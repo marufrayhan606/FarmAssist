@@ -83,7 +83,7 @@ void viewCart() {
     }
 
     double total = 0.0;
-    cout << left << setw(20) << "Name" << setw(10) << "Quantity" << setw(15) << "Price per unit" << setw(15) << "Subtotal" << endl;
+    cout << "\033[31m" << left << setw(20) << "Name" << setw(10) << "Quantity" << setw(15) << "Price per unit" << setw(15) << "Subtotal" << "\033[0m" << endl;
     cout << "---------------------------------------------------------------------" << endl;
     for (const auto& item : cart) {
         double subtotal = item.quantity * item.crop.pricePerUnit;

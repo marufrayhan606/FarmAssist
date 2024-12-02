@@ -4,7 +4,7 @@ using namespace std;
 void viewStock() {
     system("cls");
     vector<Crop> crops = loadInventory();
-    cout << left << setw(20) << "Name" << setw(10) << "Stock" << setw(15) << "Price per kg (tk)" << endl;
+    cout << "\033[31m" << left << setw(20) << "Name" << setw(10) << "Stock" << setw(15) << "Price per kg (tk)" << "\033[0m" << endl;
     cout << "---------------------------------------------------" << endl;
     for (const auto& crop : crops) {
         cout << left << setw(20) << crop.name << setw(10) << crop.stock << setw(15) << crop.pricePerUnit << endl;
