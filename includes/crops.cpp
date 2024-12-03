@@ -49,6 +49,7 @@ void dataForCrops()
     cout << "8. Mymensingh" << endl;
     do
     {
+        cout << "=> ";
         cin >> choice;
         switch (choice)
         {
@@ -94,6 +95,7 @@ void dataForCrops()
 
     do
     {
+        cout << "=> ";
         cin >> choice;
         switch (choice)
         {
@@ -115,6 +117,7 @@ void dataForCrops()
     cout << "3. Winter" << endl;
     do
     {
+        cout << "=> ";
         cin >> choice;
         switch (choice)
         {
