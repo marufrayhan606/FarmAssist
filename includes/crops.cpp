@@ -38,6 +38,7 @@ void dataForCrops()
     cout << "Enter the land area in acres: ";
     cin >> landArea;
 
+    cout << "Choose the land location: ";
     cout << "1. Dhaka" << endl;
     cout << "2. Chittagong" << endl;
     cout << "3. Rajshahi" << endl;
@@ -46,7 +47,6 @@ void dataForCrops()
     cout << "6. Sylhet" << endl;
     cout << "7. Rangpur" << endl;
     cout << "8. Mymensingh" << endl;
-    cout << "Choose the land location: " << endl;
     do
     {
         cin >> choice;
