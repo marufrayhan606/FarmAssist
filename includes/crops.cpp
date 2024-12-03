@@ -38,7 +38,6 @@ void dataForCrops()
     cout << "Enter the land area in acres: ";
     cin >> landArea;
 
-    cout << "Choose the land location: " << endl;
     cout << "1. Dhaka" << endl;
     cout << "2. Chittagong" << endl;
     cout << "3. Rajshahi" << endl;
@@ -47,6 +46,7 @@ void dataForCrops()
     cout << "6. Sylhet" << endl;
     cout << "7. Rangpur" << endl;
     cout << "8. Mymensingh" << endl;
+    cout << "Choose the land location: " << endl;
     do
     {
         cin >> choice;
@@ -80,7 +80,7 @@ void dataForCrops()
             cout << "Invalid choice. Please try again" << endl;
             break;
         }
-    } while (true);
+    } while (!(choice >= 1 && choice <= 8));
 
     system("cls");
 
