@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iomanip>
 #include <vector>
+#include <windows.h>
 #include <algorithm>
 #include "marketPlace.h"
 #include "inventory.h"
@@ -20,11 +21,16 @@ void market() {
 
     int choice;
     do {
-        cout << "1. Add to Cart" << endl;
-        cout << "2. View Cart" << endl;
-        cout << "3. Place Order" << endl;
-        cout << "4. Home" << endl;
-        cout << "5. Exit" << endl;
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+        cout << "\t\t\t\t---------------------------------" << endl;
+        cout << "\t\t\t\t|        1. Add to Cart         |" << endl;
+        cout << "\t\t\t\t|        2. View Cart           |" << endl;
+        cout << "\t\t\t\t|        3. Place Order         |" << endl;
+        cout << "\t\t\t\t|        4. Home                |" << endl;
+        cout << "\t\t\t\t|        5. Exit                |" << endl;
+        cout << "\t\t\t\t---------------------------------" << endl;
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+
         cout << "Enter your choice: ";
         cin >> choice;
 
