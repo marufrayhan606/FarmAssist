@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <windows.h>
 #include "menu.h"
 #include "guest.h"
 #include "crops.h"
@@ -13,13 +14,15 @@ using namespace std;
 void homeLayout()
 {
     system("cls");
-
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t  __        __   _                            _          _____                       _            _     _   " << endl;
     cout << "\t  \\ \\      / /__| | ___ ___  _ __ ___   ___  | |_ ___   |  ___|_ _ _ __ _ __ ___    / \\   ___ ___(_)___| |_ " << endl;
     cout << "\t   \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ | __/ _ \\  | |_ / _` | '__| '_ ` _ \\  / _ \\ / __/ __| / __| __| " << endl;
     cout << "\t    \\ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) | |  _| (_| | |  | | | | | |/ ___ \\\\__ \\__ \\ \\__ \\ |_ " << endl;
     cout << "\t     \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|  \\__\\___/  |_|  \\__,_|_|  |_| |_| |_/_/   \\_\\___/___/_|___/\\__| " << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
     cout << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t\t\t------------------------------------------------" << endl;
     cout << "\t\t\t\t|                                              |" << endl;
     cout << "\t\t\t\t|              1. User Register                |" << endl;
@@ -29,6 +32,8 @@ void homeLayout()
     cout << "\t\t\t\t|              5. Exit                         |" << endl;
     cout << "\t\t\t\t|                                              |" << endl;
     cout << "\t\t\t\t------------------------------------------------" << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+    
     cout << endl;
 
     int choice;
@@ -76,23 +81,25 @@ void registerUser()
 {
     system("cls");
     cin.ignore();
-
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t _   _                  ____            _     _             _   _             " << endl;
     cout << "\t\t| | | |___  ___ _ __   |  _ \\ ___  __ _(_)___| |_ _ __ __ _| |_(_) ___  _ __  " << endl;
     cout << "\t\t| | | / __|/ _ \\ '__|  | |_) / _ \\/ _` | / __| __| '__/ _` | __| |/ _ \\| '_ \\ " << endl;
     cout << "\t\t| |_| \\__ \\  __/ |     |  _ <  __/ (_| | \\__ \\ |_| | | (_| | |_| | (_) | | | |" << endl;
     cout << "\t\t \\___/|___/\\___|_|     |_| \\_\\___|\\__, |_|___/\\__|_|  \\__,_|\\__|_|\\___/|_| |_|" << endl;
     cout << "\t\t                                 |___/                                        " << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
     cout << endl;
-
-    string username, password;
     cout << "-------------------------------------------------------------------------------------------------------" << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+    string username, password;
     cout << endl;
     cout << "\t\t\t\tEnter a username: ";
     getline(cin, username);
     cout << endl;
     cout << "\t\t\t\tEnter a password: ";
     getline(cin, password);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
     ofstream file;
     file.open("users.csv", ios::app);
@@ -113,21 +120,24 @@ bool loginUser()
     string username, password;
     cin.ignore();
 
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t\t\t _   _                  _                _       " << endl;
     cout << "\t\t\t\t| | | |___  ___ _ __   | |    ___   __ _(_)_ __  " << endl;
     cout << "\t\t\t\t| | | / __|/ _ \\ '__|  | |   / _ \\ / _` | | '_ \\ " << endl;
     cout << "\t\t\t\t| |_| \\__ \\  __/ |     | |__| (_) | (_| | | | | |" << endl;
     cout << "\t\t\t\t \\___/|___/\\___|_|     |_____\\___/ \\__, |_|_| |_|" << endl;
     cout << "\t\t\t\t                                 |___/          " << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
     cout << endl;
     cout << "\t\t\t\t-----------------------------------------------------" << endl;
     cout << endl;
-
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t\t\tEnter your username: ";
     getline(cin, username);
     cout << endl;
     cout << "\t\t\t\tEnter your password: ";
     getline(cin, password);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
     ifstream file;
     file.open("users.csv");
@@ -145,19 +155,23 @@ bool loginUser()
 void loggedInLayout()
 {
     system("cls");
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t\t\t _                               _    ___       " << endl;
     cout << "\t\t\t\t| |    ___   __ _  __ _  ___  __| |  |_ _|_ __  " << endl;
     cout << "\t\t\t\t| |   / _ \\ / _` |/ _` |/ _ \\/ _` |   | || '_ \\ " << endl;
     cout << "\t\t\t\t| |__| (_) | (_| | (_| |  __/ (_| |   | || | | |" << endl;
     cout << "\t\t\t\t|_____\\___/ \\__, |\\__, |\\___|\\__,_|  |___|_| |_|" << endl;
     cout << "\t\t\t\t             |___/ |___/                         " << endl;
-
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+    cout << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t\t\t\t---------------------------------" << endl;
-    cout << "\t\t\t\t\t|      1. Farm Suggestions      |"<< endl;
-    cout << "\t\t\t\t\t|      2. Market                |"<< endl;
-    cout << "\t\t\t\t\t|      3. Logout                |"<< endl;
-    cout << "\t\t\t\t\t|      4. Exit                  |"<< endl;
+    cout << "\t\t\t\t\t|      1. Farm Suggestions      |" << endl;
+    cout << "\t\t\t\t\t|      2. Market                |" << endl;
+    cout << "\t\t\t\t\t|      3. Logout                |" << endl;
+    cout << "\t\t\t\t\t|      4. Exit                  |" << endl;
     cout << "\t\t\t\t\t---------------------------------" << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
     cout << endl;
     int choice;
@@ -194,19 +208,22 @@ void farmSuggestion()
     do
     {
         system("cls");
-
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
         cout << "\t\t  _____                       ____                              _   _                 " << endl;
         cout << "\t\t |  ___|_ _ _ __ _ __ ___    / ___| _   _  __ _  __ _  ___  ___| |_(_) ___  _ __  ___ " << endl;
         cout << "\t\t | |_ / _` | '__| '_ ` _ \\   \\___ \\| | | |/ _` |/ _` |/ _ \\/ __| __| |/ _ \\| '_ \\/ __|" << endl;
         cout << "\t\t |  _| (_| | |  | | | | | |   ___) | |_| | (_| | (_| |  __/\\__ \\ |_| | (_) | | | \\__ \\" << endl;
         cout << "\t\t |_|  \\__,_|_|  |_| |_| |_|  |____/ \\__,_|\\__, |\\__, |\\___||___/\\__|_|\\___/|_| |_|___/" << endl;
         cout << "\t\t                                          |___/ |___/                                 " << endl;
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
         cout << endl;
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_INTENSITY);
         cout << "\t\t\t\t\t---------------------------------" << endl;
         cout << "\t\t\t\t\t|        Enter your choice:     |" << endl;
         cout << "\t\t\t\t\t|        1. Crops               |" << endl;
         cout << "\t\t\t\t\t|        2. Livestock           |" << endl;
         cout << "\t\t\t\t\t---------------------------------" << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
         cout << endl;
         cout << "\t\tEnter your choice: ";
         cin >> choice;
@@ -239,39 +256,43 @@ void admin()
     string username, password;
 
     system("cls");
-
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t\t\t     _       _           _          _                _       " << endl;
     cout << "\t\t\t\t    / \\   __| |_ __ ___ (_)_ __    | |    ___   __ _(_)_ __  " << endl;
     cout << "\t\t\t\t   / _ \\ / _` | '_ ` _ \\| | '_ \\   | |   / _ \\ / _` | | '_ \\ " << endl;
     cout << "\t\t\t\t  / ___ \\ (_| | | | | | | | | | |  | |__| (_) | (_| | | | | |" << endl;
     cout << "\t\t\t\t /_/   \\_\\__,_|_| |_| |_|_|_| |_|  |_____\\___/ \\__, |_|_| |_|" << endl;
     cout << "\t\t\t\t                                               |___/         " << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
     cout << "\t\t\t\t--------------------------------------------------------------------" << endl;
     cout << endl;
 
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t\t\t               Enter admin username: ";
     cin >> username;
     if (username == admin.username)
     {
         cout << "\t\t\t\t               Enter admin password: ";
         cin >> password;
+        cout << endl << endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
         if (password == admin.password)
         {
-            cout << "\t\tLogin successful" << endl;
+            cout << "\t\t\t\tLogin successful" << endl;
             cout << endl;
             cout << endl;
             getchar();
-            cout << "Press any key to continue" << endl;
+            cout << "\t\t\t\tPress any key to continue" << endl;
             getchar();
             adminPanel();
         }
         else
         {
-            cout << "\t\tInvalid username or password" << endl;
+            cout << "\t\t\t\tInvalid username or password" << endl;
         }
     }
     else
     {
-        cout << "\t\tInvalid username or password" << endl;
+        cout << "\t\t\t\tInvalid username or password" << endl;
     }
 }

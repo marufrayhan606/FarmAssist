@@ -625,9 +625,9 @@ void suggestCrop()
         }
     }
 
-    cout << "Approximate Seed Amount: " << seedAmount << " kg\n";
-    cout << "Approximate Seed Cost: " << seedCost << " tk\n";
-    cout << "Recommended Fertilizer Cost: " << fertilizerCost << " tk\n";
+    cout << "Approximate Seed Amount: " << seedAmount << " unit\n";
+    cout << "Approximate Seed Cost: " << seedCost << " unit\n";
+    cout << "Recommended Fertilizer Cost: " << fertilizerCost << " unit\n";
 
     if (phLevel < 5.5)
     {
