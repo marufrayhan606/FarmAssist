@@ -631,11 +631,11 @@ void suggestCrop()
 
     if (phLevel < 5.5)
     {
-        cout << "\nNote: Soil is acidic. Consider adding lime.\n";
+        cout << "\033[31m\nNote: Soil is acidic. Consider adding lime.\033[0m\n";
     }
     else if (phLevel > 7.5)
     {
-        cout << "\nNote: Soil is alkaline. Consider adding sulfur.\n";
+        cout << "\033[31m\nNote: Soil is alkaline. Consider adding sulfur.\033[0m\n";
     }
 
     cout << "\n\nPress any key to return to Home Screen";
