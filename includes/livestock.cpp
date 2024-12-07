@@ -6,7 +6,7 @@ double livestockArea;
 
 void dataForLivestock()
 {
-    cout << "Enter the livestock area in acres: ";
+    cout << "\t\t\t\tEnter the livestock area in acres: ";
     cin >> livestockArea;
 
 }
@@ -27,23 +27,28 @@ void suggestLivestock()
         {"Pigs", 100.0, 300.0, 0.8},
         {"Chickens", 20.0, 50.0, 0.1}
     };
-
-    cout << "Suggested livestock options for your farm:\n";
+    cout << "\n\n";
+    cout << "\t\t\t\tSuggested livestock options for your farm:\n\n\n";
     for (const auto& livestock : livestockOptions) {
         if (livestockArea >= livestock.areaRequired) {
             int maxLivestock = static_cast<int>(livestockArea / livestock.areaRequired);
-            cout << "Type: " << livestock.type << endl
-                 << ", Monthly Cost: $" << livestock.monthlyCost * maxLivestock << endl
-                 << ", Feed Amount: " << livestock.feedAmount * maxLivestock << " lbs" << endl 
-                 << ", Area Required: " << livestock.areaRequired * maxLivestock << " acres\n" << endl << endl;
+            cout << "\t\t\t\t------------------------------------" << endl;
+            cout << "\t\t\t\t  Type: " << livestock.type << endl;
+            cout << "\t\t\t\t------------------------------------" << endl;
+            cout << "\t\t\t\t   * Monthly Cost: $" << livestock.monthlyCost * maxLivestock << endl;
+            cout << "\t\t\t\t   * Feed Amount: " << livestock.feedAmount * maxLivestock << " lbs" << endl ;
+            cout << "\t\t\t\t   * Area Required: " << livestock.areaRequired * maxLivestock << " acres\n" << endl << endl;
         }
     }
+
+    cout << "\t\tPress any key to continue...";
+    cin.ignore();
+    cin.get();
 }
 void livestock()
 {
     system("cls");
     dataForLivestock();
-    system("cls");
     suggestLivestock();
 
 }

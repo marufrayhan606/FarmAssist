@@ -37,6 +37,7 @@ void homeLayout()
     cout << endl;
 
     int choice;
+    bool loggedIn = false;
 
     do
     {
@@ -49,8 +50,8 @@ void homeLayout()
             registerUser();
             break;
         case 2:
-
-            if (loginUser())
+            loggedIn = loginUser();
+            if (loggedIn)
             {
                 loggedInLayout();
                 break;
@@ -58,6 +59,7 @@ void homeLayout()
             else
             {
                 cout << "Login failed. Please try again." << endl;
+                getchar();
                 loginUser();
             }
             break;

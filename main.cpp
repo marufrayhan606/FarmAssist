@@ -1,6 +1,8 @@
 #include <iostream>
 #include <windows.h>
 #include "includes/menu.h"
+
+int loggedIn = 0;
 using namespace std;
 
 void printSlowly(const std::string &s, int delay)

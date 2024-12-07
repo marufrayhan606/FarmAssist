@@ -38,7 +38,7 @@ void dataForCrops()
     cout << "Enter the land area in acres: ";
     cin >> landArea;
 
-    cout << "Choose the land location: ";
+    cout << "Choose the land location: \n";
     cout << "1. Dhaka" << endl;
     cout << "2. Chittagong" << endl;
     cout << "3. Rajshahi" << endl;
@@ -641,15 +641,6 @@ void suggestCrop()
     cout << "\n\nPress any key to return to Home Screen";
     cin.ignore();
     cin.get();
-    
-    if (loginUser())
-    {
-        loggedInLayout();
-    }
-    else
-    {
-        homeLayout();
-    }
     
 }
 
