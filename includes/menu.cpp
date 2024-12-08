@@ -70,7 +70,7 @@ void homeLayout()
             admin();
             break;
         case 5:
-            return;
+            exit(0);
         default:
             cout << "Invalid choice. Please try again" << endl;
             break;
@@ -224,6 +224,7 @@ void farmSuggestion()
         cout << "\t\t\t\t\t|        Enter your choice:     |" << endl;
         cout << "\t\t\t\t\t|        1. Crops               |" << endl;
         cout << "\t\t\t\t\t|        2. Livestock           |" << endl;
+        cout << "\t\t\t\t\t|        3. Home                |" << endl;
         cout << "\t\t\t\t\t---------------------------------" << endl;
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
         cout << endl;
@@ -237,6 +238,9 @@ void farmSuggestion()
             break;
         case 2:
             livestock();
+            break;
+        case 3:
+            loggedInLayout();
             break;
         default:
             cout << "Invalid choice. Please try again" << endl;

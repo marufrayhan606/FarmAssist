@@ -36,12 +36,13 @@ void guest()
             break;
         case 2:
             livestock();
+            guest();
             break;
         case 3:
             homeLayout();
             break;
         case 4:
-            return;
+            exit(0);
             break;
         default:
             cout << "Invalid choice. Please try again" << endl;
