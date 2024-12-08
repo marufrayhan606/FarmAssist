@@ -195,7 +195,7 @@ void loggedInLayout()
             homeLayout();
             break;
         case 4:
-            return;
+            exit(0);
         default:
             cout << "Invalid choice. Please try again" << endl;
             break;
