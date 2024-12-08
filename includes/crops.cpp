@@ -35,18 +35,18 @@ Season season;
 
 void dataForCrops()
 {
-    cout << "Enter the land area in acres: ";
+    cout << "\t\t\t\tEnter the land area in acres: ";
     cin >> landArea;
 
-    cout << "Choose the land location: \n";
-    cout << "1. Dhaka" << endl;
-    cout << "2. Chittagong" << endl;
-    cout << "3. Rajshahi" << endl;
-    cout << "4. Khulna" << endl;
-    cout << "5. Barisal" << endl;
-    cout << "6. Sylhet" << endl;
-    cout << "7. Rangpur" << endl;
-    cout << "8. Mymensingh" << endl;
+    cout << "\t\t\t\tChoose the land location: \n";
+    cout << "\t\t\t\t1. Dhaka" << endl;
+    cout << "\t\t\t\t2. Chittagong" << endl;
+    cout << "\t\t\t\t3. Rajshahi" << endl;
+    cout << "\t\t\t\t4. Khulna" << endl;
+    cout << "\t\t\t\t5. Barisal" << endl;
+    cout << "\t\t\t\t6. Sylhet" << endl;
+    cout << "\t\t\t\t7. Rangpur" << endl;
+    cout << "\t\t\t\t8. Mymensingh" << endl;
     do
     {
         cout << "=> ";
@@ -78,19 +78,19 @@ void dataForCrops()
             landLocation = MYMENSINGH;
             break;
         default:
-            cout << "Invalid choice. Please try again" << endl;
+            cout << "\t\tInvalid choice. Please try again" << endl;
             break;
         }
     } while (!(choice >= 1 && choice <= 8));
 
     system("cls");
 
-    cout << "Enter the PH level: ";
+    cout << "\t\t\t\tEnter the PH level: ";
     cin >> phLevel;
 
-    cout << "Choose the soil type: " << endl;
-    cout << "1. Clay" << endl;
-    cout << "2. Sandy" << endl;
+    cout << "\t\t\t\tChoose the soil type: " << endl;
+    cout << "\t\t\t\t1. Clay" << endl;
+    cout << "\t\t\t\t2. Sandy" << endl;
     
 
     do
@@ -106,15 +106,15 @@ void dataForCrops()
             soil = SANDY;
             break;
         default:
-            cout << "Invalid choice. Please try again" << endl;
+            cout << "\t\tInvalid choice. Please try again" << endl;
             break;
         }
     } while (!(choice >= 1 && choice <= 2));
 
-    cout << "Choose the current season: " << endl;
-    cout << "1. Summer" << endl;
-    cout << "2. Monsoon" << endl;
-    cout << "3. Winter" << endl;
+    cout << "\t\t\t\tChoose the current season: \n" << endl;
+    cout << "\t\t\t\t1. Summer" << endl;
+    cout << "\t\t\t\t2. Monsoon" << endl;
+    cout << "\t\t\t\t3. Winter" << endl;
     do
     {
         cout << "=> ";
@@ -131,7 +131,7 @@ void dataForCrops()
             season = WINTER;
             break;
         default:
-            cout << "Invalid choice. Please try again" << endl;
+            cout << "\t\tInvalid choice. Please try again" << endl;
             break;
         }
     } while (!(choice >= 1 && choice <= 3));
