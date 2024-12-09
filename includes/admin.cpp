@@ -64,7 +64,7 @@ void manageStock()
             cin >> cropStock;
             cout << "Enter new price per unit: ";
             cin >> cropPrice;
-            crops.push_back(Crop{cropName, stoi(cropStock), stof(cropPrice)});
+            crops.push_back(Crop{cropName, stoi(cropStock), stod(cropPrice)});
             cout << "Item added successfully." << endl;
         }
         else
