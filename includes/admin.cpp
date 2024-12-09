@@ -27,8 +27,9 @@ void saveInventory(const vector<Crop> &crops)
 
 void manageStock()
 {
+    int choice;
     vector<Crop> crops = loadInventory();
-    string cropName;
+    string cropName, cropStock, cropPrice;
     cout << "Enter the crop name to update: ";
     cin.ignore();
     getline(cin, cropName);
@@ -49,13 +50,35 @@ void manageStock()
 
     if (!found)
     {
-        cout << "Crop not found in inventory." << endl;
+        // cout << "Crop not found in inventory." << endl;
+        cout << "Do you wish to add " << cropName << "?" << endl;
+        cout << "1. Yes" << endl;
+        cout << "2. No" << endl;
+        cout << endl;
+        cout << "=> ";
+        cin >> choice;
+
+        if (choice == 1)
+        {
+            cout << "Enter new stock quantity: ";
+            cin >> cropStock;
+            cout << "Enter new price per unit: ";
+            cin >> cropPrice;
+            crops.push_back(Crop{cropName, stoi(cropStock), stof(cropPrice)});
+            cout << "Item added successfully." << endl;
+        }
+        else
+        {
+            cout << "Item not added. Inventory Restored" << endl;
+        }
+        
     }
     else
     {
-        saveInventory(crops);
+        
         cout << "Inventory updated successfully." << endl;
     }
+    saveInventory(crops);
 }
 
 void adminPanel()
