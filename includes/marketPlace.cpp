@@ -130,6 +130,8 @@ void placeOrder() {
 
     cout << "Order placed successfully!" << endl;
     cart.clear();
+
+    getchar();
     getchar();
     loggedInLayout();
 }

@@ -21,17 +21,17 @@ int main()
 
     cout << endl << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-    printSlowly("\t\t\t _      __    __                     __     \n", 1);
-    printSlowly("\t\t\t| | /| / /__ / /______  __ _  ___   / /____ \n", 1);
-    printSlowly("\t\t\t| |/ |/ / -_) / __/ _ \\/  ' \\/ -_) / __/ _ \\\n", 1);
-    printSlowly("\t\t\t|__/|__/\\__/_/\\__/\\___/_/_/_/\\__/  \\__/\\___/\n", 1);
-    printSlowly("\t\t\t                                             \n", 1);
-    printSlowly("\t\t\t\t\t\t ______                                    _     _   \n", 1);
-    printSlowly("\t\t\t\t\t\t|  ____|                     /\\           (_)   | |  \n", 1);
-    printSlowly("\t\t\t\t\t\t| |__ __ _ _ __ _ __ ___    /  \\   ___ ___ _ ___| |_ \n", 1);
-    printSlowly("\t\t\t\t\t\t|  __/ _` | '__| '_ ` _ \\  / /\\ \\ / __/ __| / __| __|\n", 1);
-    printSlowly("\t\t\t\t\t\t| | | (_| | |  | | | | | |/ ____ \\\\__ \\__ \\ \\__ \\ |_ \n", 1);
-    printSlowly("\t\t\t\t\t\t|_|  \\__,_|_|  |_| |_| |_/_/    \\_\\___/___/_|___/\\__|\n", 1);
+    printSlowly("\t\t\t _      __    __                     __     \n", 3);
+    printSlowly("\t\t\t| | /| / /__ / /______  __ _  ___   / /____ \n", 3);
+    printSlowly("\t\t\t| |/ |/ / -_) / __/ _ \\/  ' \\/ -_) / __/ _ \\\n", 3);
+    printSlowly("\t\t\t|__/|__/\\__/_/\\__/\\___/_/_/_/\\__/  \\__/\\___/\n", 3);
+    printSlowly("\t\t\t                                             \n", 3);
+    printSlowly("\t\t\t\t\t\t ______                                    _     _   \n", 3);
+    printSlowly("\t\t\t\t\t\t|  ____|                     /\\           (_)   | |  \n", 3);
+    printSlowly("\t\t\t\t\t\t| |__ __ _ _ __ _ __ ___    /  \\   ___ ___ _ ___| |_ \n", 3);
+    printSlowly("\t\t\t\t\t\t|  __/ _` | '__| '_ ` _ \\  / /\\ \\ / __/ __| / __| __|\n", 3);
+    printSlowly("\t\t\t\t\t\t| | | (_| | |  | | | | | |/ ____ \\\\__ \\__ \\ \\__ \\ |_ \n", 3);
+    printSlowly("\t\t\t\t\t\t|_|  \\__,_|_|  |_| |_| |_/_/    \\_\\___/___/_|___/\\__|\n", 3);
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
     cout << endl;
@@ -39,7 +39,7 @@ int main()
     printSlowly("\t\t\t\t\t\tLoading ... \n", 3);
     cout << endl;
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-    printSlowly("                                                                                                        \n", 3);
+    printSlowly("                                                                                                        \n", 5);
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
     // getchar();
